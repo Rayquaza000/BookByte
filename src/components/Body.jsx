@@ -14,7 +14,7 @@ function Body() {
             <span className='text-[#E6E0EC] font-bold'>An online library system.</span>
         </div>
         <br></br>
-        <span className="px-10 text-[20px] font-bold">The site contains books of following categories:</span>
+        <span className="px-10 text-[20px] font-bold">This library contains books of following categories:</span>
         <div className='flex flex-wrap flex-row items-stretch justify-around gap-x-40 px-10 text-[18px] font-bold pb-15'>
             
             <BookGenreCategories genreName="Fiction" bgColor="bg-[#FEA8A8]"/>

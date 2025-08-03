@@ -9,6 +9,7 @@ import appStore from './utils/appStore.js'
 import Home from './components/Home.jsx'
 import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
+import BrowseBooks from './components/BrowseBooks.jsx'
 
 function App() {
   const appRouter=createBrowserRouter([
@@ -22,7 +23,7 @@ function App() {
       },
       {
         path:"/BrowseBooks",
-        element:<div>BrowseBooks</div>,
+        element:<BrowseBooks/>,
       },
       {
         path:"/AddBook",
