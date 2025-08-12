@@ -4,14 +4,19 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header.jsx'
 import Body from './components/Body.jsx'
-import { Provider } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
 import appStore from './utils/appStore.js'
 import Home from './components/Home.jsx'
 import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
 import BrowseBooks from './components/BrowseBooks.jsx'
+import AddBook from './components/AddBook.jsx'
+import BookDetailsById from './components/BookDetailsById.jsx'
+import ErrorPath from './components/ErrorPath.jsx'
+import { addBook } from './utils/booksSlice.js'
 
 function App() {
+  
   const appRouter=createBrowserRouter([
   {
     path:"/", 
@@ -27,9 +32,14 @@ function App() {
       },
       {
         path:"/AddBook",
-        element:<div>AddBook</div>
+        element:<AddBook/>
+      },
+      {
+        path:"/BookDetails/:bookId",
+        element:<BookDetailsById/>
       }
-    ]
+    ],
+    errorElement:<ErrorPath/>
 }
 ]);
 

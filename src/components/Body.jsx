@@ -4,7 +4,6 @@ import BookCard from './BookCard'
 import { useSelector } from 'react-redux'
 function Body() {
     const books=useSelector((store)=>{return store.books.items});
-    //console.log(books);
   return (
     <>
     <div className='w-full h-full bg-[#784c86] pt-10 text-white'>
@@ -39,8 +38,13 @@ function Body() {
             books.map((book,index)=>{
                 if(book.isPopular==true)
                 {   
-                    console.log(book);
-                    return <BookCard key={index} id={book.id} title={book.title} author={book.author} description={book.description} imgsrc={book.imgsrc}/>
+                    if(book.imgsrc){
+                        return <BookCard key={index} id={book.id} title={book.title} author={book.author} description={book.description} imgsrc={book.imgsrc}/>
+                        }
+                        else    
+                        {
+                            return <BookCard key={index} id={book.id} title={book.title} author={book.author} description={book.description} imgsrc={`data:image/png;base64,${book.bkimage}`}/>
+                        }
                 }
             })
         }

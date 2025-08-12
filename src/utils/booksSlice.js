@@ -20,9 +20,9 @@ const booksSlice=createSlice({
             imgsrc:wof,
             description:"Wings of Fire is the 1999 autobiography of Indian aerospace scientist and future President of India, A. P. J. Abdul Kalam. It was written by Kalam and Arun Tiwari.",
             rating: 4.8,
-            category:["Biography,Non-Fiction"],
+            category:["Biography","Non-Fiction"],
             isPopular:true,
-            dateAddedToLibrary:new Date("2025-08-01T06:00:00")
+            //dateAddedToLibrary:new Date("2025-08-01T06:00:00")
         },
         {
             id:2,
@@ -33,7 +33,7 @@ const booksSlice=createSlice({
             rating:4.7,
             category:["Fiction","Thriller","Mystery"],
             isPopular:true,
-            dateAddedToLibrary:new Date("2025-08-01T06:00:00")
+            //dateAddedToLibrary:new Date("2025-08-01T06:00:00")
         },
         {
             id:3,
@@ -44,7 +44,7 @@ const booksSlice=createSlice({
             rating:4.5,
             category:["Fiction","Science Fiction","Comedy","Fantasy"],
             isPopular:true,
-            dateAddedToLibrary:new Date("2025-08-01T06:00:00")
+            //dateAddedToLibrary:new Date("2025-08-01T06:00:00")
         },
         {
             id:4,
@@ -55,7 +55,7 @@ const booksSlice=createSlice({
             rating:4.1,
             category:["Biography","Non-Fiction"],
             isPopular:true,
-            dateAddedToLibrary:new Date("2025-08-03T10:52:00")
+            //dateAddedToLibrary:new Date("2025-08-03T10:52:00")
         },
         {
             id:5,
@@ -66,7 +66,7 @@ const booksSlice=createSlice({
             rating:4.5,
             category:["Horror","Fiction","Fantasy","Thriller"],
             isPopular:false,
-            dateAddedToLibrary:new Date("2025-08-03T10:59:00")
+            //dateAddedToLibrary:new Date("2025-08-03T10:59:00")
         },
         {
             id:6,
@@ -77,7 +77,7 @@ const booksSlice=createSlice({
             rating:4.4,
             category:["Horror","Fiction","Thriller"],
             isPopular:false,
-            dateAddedToLibrary:new Date("2025-08-03T11:17:00")
+            //dateAddedToLibrary:new Date("2025-08-03T11:17:00")
         },
         {
             id:7,
@@ -88,7 +88,7 @@ const booksSlice=createSlice({
             rating:3.9,
             category:["Horror","Fiction","Thriller"],
             isPopular:false,
-            dateAddedToLibrary:new Date("2025-08-03T11:20:00")
+            //dateAddedToLibrary:new Date("2025-08-03T11:20:00")
         },
         {
             id:8,
@@ -99,7 +99,7 @@ const booksSlice=createSlice({
             rating:4.0,
             category:["Science-Fiction","Fiction"],
             isPopular:true,
-            dateAddedToLibrary:new Date("2025-08-03T11:22:00")
+            //dateAddedToLibrary:new Date("2025-08-03T11:22:00")
         },
         {
             id:9,
@@ -110,7 +110,7 @@ const booksSlice=createSlice({
             rating:4.7,
             category:["Science-Fiction","Fiction"],
             isPopular:false,
-            dateAddedToLibrary:new Date("2025-08-03T11:25:00")
+            //dateAddedToLibrary:new Date("2025-08-03T11:25:00")
         },
         {
             id:10,
@@ -121,7 +121,7 @@ const booksSlice=createSlice({
             rating:4.2,
             category:["Mystery","Fiction","Thriller"],
             isPopular:false,
-            dateAddedToLibrary:new Date("2025-08-03T11:31:00")
+            //dateAddedToLibrary:new Date("2025-08-03T11:31:00")
         }
     ],
     },
