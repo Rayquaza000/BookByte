@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 function AddBook() {
-
+    //Declared and initialized all state variables
     const [uploadedFile,setUploadedFile]=useState(null);
     const [bkTitle,setBkTitle]=useState("");
     const [bkAuthor,setBkAuthor]=useState("");
@@ -29,11 +29,12 @@ function AddBook() {
     const dispatch=useDispatch();
     const navigate=useNavigate();
 
+    //Code for handling uploaded image file
     function handleUploadedFile(e){
         setBookImgPreview(URL.createObjectURL(e.target.files[0]));
         setUploadedFile(e.target.files[0]);
     }
-
+    //Code to add book to redux and local storage
     function addBookToSystem(){
 
         const booksforls=[];
@@ -49,16 +50,16 @@ function AddBook() {
         if(catComedy==true){categoryChecks.push("Comedy");}
         if(catBio==true){categoryChecks.push("Biography");}
 
+        //If any field is empty show error message
         if(bkTitle=="" || bkAuthor=="" || bkDescription=="" || bkRating=="" || categoryChecks==[] || setUploadedFile==null)
         {
             setErrorMsg("Enter data in all fields");
             return;
         }
-
+        //If rating is not between 0 and 5 show error message
         if(bkRating<0 || bkRating>5)
         {
             setErrorMsg("Enter rating between 0 and 5");
-            //setTimeout(()=>{setErrorMsg(false)},3000);
             return;
         }
         setErrorMsg("");
@@ -69,7 +70,7 @@ function AddBook() {
         reader.onloadend = () => {
             const base64WithPrefix = reader.result;
             setBase64String(base64WithPrefix.replace(/^data:.+;base64,/, ''));
-
+            //prepare an object with all the data of the book
             const individualBookData={
             title:bkTitle,
             author:bkAuthor,
@@ -92,8 +93,6 @@ function AddBook() {
         {
             const getPrevData = JSON.parse(localStorage.getItem("booksinls"));
             const convertedPrevData=[];
-            //convertedPrevData.push(JSON.parse(getPrevData));
-            //console.log("####"+convertedPrevData[convertedPrevData.length-1].id);
             individualBookData.id=parseInt(getPrevData[getPrevData.length-1].id)+1;
             individualBookData.isRecent=1;
             booksforls.push(individualBookData);
@@ -110,7 +109,7 @@ function AddBook() {
                 return;
             }
         }
-        
+        //Dispatch an action to add the book to redux state management
         dispatch(addBook(individualBookData));
         setBkAddedSuccessMsg(true);
 

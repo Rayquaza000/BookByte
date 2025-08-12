@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+
+//Component to show error when an invalid path is tried to go to.
 function ErrorPath() {
     const navigate=useNavigate();
     function handleBackToHomePageButton(){

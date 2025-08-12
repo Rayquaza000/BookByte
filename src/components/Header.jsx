@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+
+//Header component which will be visible throuhout the application
 function Header() {
   return (
     <div className='flex flex-row w-full h-20 bg-gray-500 ps-10 text-white'> 

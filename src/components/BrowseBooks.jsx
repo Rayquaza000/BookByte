@@ -4,18 +4,22 @@ import BookCard from './BookCard';
 import { useNavigate } from 'react-router-dom';
 
 function BrowseBooks() {
-
+    //get data from redux store
     const books=useSelector((store)=>{return store.books.items});
     
-
+    //declare and initialize all the required state variables
     const [searchValue,setSearchValue]=useState("");
     const [searchOnClick,setSearchOnClick]=useState("");
     const [selectedCategory,setSelectedCategory]=useState("");
     const navigate=useNavigate();
+
+    //Search bar controlled component
     function getSearchValue(e){
         setSearchValue(e.target.value);
     }
+
     useEffect(()=>{console.log(searchValue)},[searchValue]);
+    
     function handleSearchOnClick(){
         setSearchOnClick(searchValue);
     }
@@ -36,7 +40,7 @@ function BrowseBooks() {
         fontSize="text-[12px]";
     }
     
-
+    //code to navigate to the details page of selected book
     function handleViewDetails(){
         navigate("/BookDetails/"+books[books.length-1].id);
     }

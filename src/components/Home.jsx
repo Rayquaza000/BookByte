@@ -8,6 +8,8 @@ import { useSelector } from 'react-redux';
 function Home() {
 
   const booksfromredux=useSelector((store)=>{return store.books.items});
+
+  //code to get data after a refresh attempt is made
   if(booksfromredux[booksfromredux.length-1].id<=10){
     const dispatch=useDispatch();
   const booksfromls=JSON.parse(localStorage.getItem("booksinls"));

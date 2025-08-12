@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+
+//when user clicks on view details the user is directed here to show full details of the selected book
 function BookDetailsById() {
     const {bookId}=useParams();
     const books=useSelector((store)=>{return store.books.items});

@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
+//Component to create a card to show book image, title and "view details" button
 function BookCard(params) {
-    //const book=useSelector((store)=>store.books.items[0]);
     const navigate=useNavigate();
     const bookId=params.id;
     let fontSize="text-1xl";

@@ -3,6 +3,7 @@ import BookGenreCategories from './BookGenreCategories'
 import BookCard from './BookCard'
 import { useSelector } from 'react-redux'
 function Body() {
+    //get data from redux store
     const books=useSelector((store)=>{return store.books.items});
   return (
     <>
